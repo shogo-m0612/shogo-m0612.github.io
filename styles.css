@@ -7,80 +7,69 @@
 
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
   color: #333;
-  background-color: #fafafa;
+  background: #f9f9f9;
 }
 
-.site-header {
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* サイドバー */
+.sidebar {
+  width: 200px;
   background-color: #005f73;
   color: #fff;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+.sidebar-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
   text-align: center;
-  padding: 2rem 1rem;
 }
 
-.site-header .subtitle {
-  font-size: 1rem;
-  opacity: 0.8;
-  margin-top: 0.5rem;
-}
-
-.site-nav {
-  background-color: #0a9396;
-}
-
-.site-nav ul {
-  display: flex;
-  justify-content: center;
+.sidebar nav ul {
   list-style: none;
 }
 
-.site-nav li {
-  margin: 0 1rem;
+.sidebar nav li + li {
+  margin-top: 0.5rem;
 }
 
-.site-nav a {
-  display: block;
-  padding: 1rem;
+.sidebar a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
-}
-
-.site-nav a:hover {
-  background-color: rgba(255,255,255,0.2);
+  display: block;
+  padding: 0.5rem;
   border-radius: 4px;
 }
 
-.site-content {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+.sidebar a:hover {
+  background: rgba(255,255,255,0.2);
 }
 
-.site-content section {
-  margin-bottom: 2rem;
+/* メインコンテンツ */
+.main-content {
+  flex: 1;
+  padding: 2rem;
 }
 
-.site-content h2 {
+.content-section {
+  margin-bottom: 3rem;
+}
+
+.content-section h1 {
+  margin-bottom: 1rem;
   border-bottom: 2px solid #94d2bd;
   padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
 }
 
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.skills-list li {
-  background-color: #ee9b00;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  margin: 0.25rem;
-  border-radius: 4px;
-}
-
+/* フッター */
 .site-footer {
   text-align: center;
   padding: 1rem;
