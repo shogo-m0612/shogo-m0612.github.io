@@ -18,13 +18,15 @@ body {
 
 /* サイドバー */
 .sidebar {
+  position: fixed;   /* ← fixed にして常に表示 */
+  top: 0;            /* ← 上端に合わせる */
+  left: 0;
   width: 200px;
+  height: 100vh;     /* ← ビューポート高さいっぱい */
   background-color: #005f73;
   color: #fff;
   padding: 1rem;
-  position: sticky;
-  top: 0;
-  align-self: flex-start;
+  overflow-y: auto;  /* ← コンテンツが溢れたらスクロール */
 }
 
 .sidebar-title {
@@ -55,7 +57,7 @@ body {
 
 /* メインコンテンツ */
 .main-content {
-  flex: 1;
+  margin-left: 200px; /* ← サイドバーと同じ幅 */
   padding: 2rem;
 }
 
