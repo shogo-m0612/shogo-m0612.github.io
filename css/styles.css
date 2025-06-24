@@ -1,1 +1,80 @@
+/* styles.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background: #f9f9f9;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* サイドバー */
+.sidebar {
+  position: fixed;   /* ← fixed にして常に表示 */
+  top: 0;            /* ← 上端に合わせる */
+  left: 0;
+  width: 200px;
+  height: 100vh;     /* ← ビューポート高さいっぱい */
+  background-color: #005f73;
+  color: #fff;
+  padding: 1rem;
+  overflow-y: auto;  /* ← コンテンツが溢れたらスクロール */
+}
+
+.sidebar-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav li + li {
+  margin-top: 0.5rem;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.sidebar a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* メインコンテンツ */
+.main-content {
+  margin-left: 200px; /* ← サイドバーと同じ幅 */
+  padding: 2rem;
+}
+
+.content-section {
+  margin-bottom: 3rem;
+}
+
+.content-section h1 {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #94d2bd;
+  padding-bottom: 0.5rem;
+}
+
+/* フッター */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #005f73;
+  color: #fff;
+}
