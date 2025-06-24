@@ -4,54 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>赤神のプロフィール</title>
+  <title>赤神そら プロフィール</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1>赤神 そら</h1>
-    <p class="subtitle">自己紹介サイト</p>
-  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <h2 class="sidebar-title">メニュー</h2>
+      <nav>
+        <ul>
+          <li><a href="#home">ホーム</a></li>
+          <li><a href="#profile">プロフィール</a></li>
+          <li><a href="#notes">ノート置き場</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-  <nav class="site-nav">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#career">経歴</a></li>
-      <li><a href="#skills">スキル</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <main class="main-content">
+      <section id="home" class="content-section">
+        <h1>ホーム</h1>
+        <p>ここはホームセクションです。サイト全体の概要や最新情報を載せてください。</p>
+      </section>
 
-  <main class="site-content">
-    <section id="about">
-      <h2>About</h2>
-      <p>こんにちは、赤神そらです。〇〇大学〇〇学部を卒業後、△△業界でエンジニアとして働いています。趣味はプログラミングと旅行。</p>
-    </section>
+      <section id="profile" class="content-section">
+        <h1>プロフィール</h1>
+        <p>赤神そらの自己紹介を書きます。学歴・職歴・趣味などを整理して掲載しましょう。</p>
+      </section>
 
-    <section id="career">
-      <h2>経歴</h2>
-      <ul>
-        <li>2018年3月　〇〇大学卒業</li>
-        <li>2018年4月　株式会社□□ 入社</li>
-        <li>2022年6月　現在の会社に転職</li>
-      </ul>
-    </section>
-
-    <section id="skills">
-      <h2>スキル</h2>
-      <ul class="skills-list">
-        <li>HTML / CSS / JavaScript</li>
-        <li>Python / NumPy / Pandas</li>
-        <li>Git / GitHub</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>メール: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/your-username">github.com/your-username</a></p>
-    </section>
-  </main>
+      <section id="notes" class="content-section">
+        <h1>ノート置き場</h1>
+        <p>技術メモやリンク、学習記録などをまとめるスペースです。</p>
+      </section>
+    </main>
+  </div>
 
   <footer class="site-footer">
     <p>&copy; 2025 赤神そら</p>
