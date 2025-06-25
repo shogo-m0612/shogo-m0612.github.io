@@ -7,30 +7,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">ホーム</a></li>
-                    <li><a href="math.html">数学</a></li>
-                    <li><a href="physics.html">物理</a></li>
-                    <li><a href="info.html">情報</a></li>
-                </ul>
-            </nav>
-        </aside>
-
-        <main class="main-content">
-            <h1>ホーム</h1>
-            <p>このサイトは、私が学習した内容をまとめたPDFを公開する場所です。</p>
-
-            <h2>経歴</h2>
-            <ul class="profile-list">
-                <li>20XX年 XX大学 XX学部 入学</li>
-                <li>20XX年 XX研究室に配属</li>
-                <li>20XX年 XX大学 XX学部 卒業</li>
-                <li>現在: XXXXについて勉強中</li>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="#" class="menu-toggle" data-target="submenu-math">数学</a></li>
+                <li><a href="#" class="menu-toggle" data-target="submenu-physics">物理</a></li>
+                <li><a href="#" class="menu-toggle" data-target="submenu-info">情報</a></li>
             </ul>
-        </main>
+        </nav>
+    </aside>
+
+    <div class="submenu-container">
+        <div id="submenu-math" class="submenu">
+            <ul>
+                <li><a href="statistics.html">統計学</a></li>
+            </ul>
+        </div>
+        <div id="submenu-physics" class="submenu">
+            <ul>
+                <li><a href="quantum.html">量子力学</a></li>
+            </ul>
+        </div>
+        <div id="submenu-info" class="submenu">
+            <ul>
+                <li><a href="machine_learning.html">機械学習</a></li>
+            </ul>
+        </div>
     </div>
+
+    <main class="main-content">
+        <h1>ホーム</h1>
+        <p>このサイトは、私が学習した内容をまとめたPDFを公開する場所です。</p>
+        <h2>経歴</h2>
+        <ul class="profile-list">
+            <li>20XX年 XX大学 XX学部 入学</li>
+        </ul>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
