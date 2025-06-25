@@ -7,31 +7,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><a href="math.html" class="active">数学</a></li>
-                    <li><a href="physics.html">物理</a></li>
-                    <li><a href="info.html">情報</a></li>
-                </ul>
-            </nav>
-        </aside>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="#" class="menu-toggle" data-target="submenu-math">数学</a></li>
+                <li><a href="#" class="menu-toggle" data-target="submenu-physics">物理</a></li>
+                <li><a href="#" class="menu-toggle" data-target="submenu-info">情報</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-        <main class="main-content">
-            <h1>数学</h1>
-            <p>数学に関する資料をまとめています。</p>
-
-            <ul class="pdf-list">
-                <li>
-                    <a href="pdfs/sample1.pdf" target="_blank">微分積分学の基礎.pdf</a>
-                </li>
-                <li>
-                    <a href="pdfs/sample2.pdf" target="_blank">線形代数学ノート.pdf</a>
-                </li>
-                </ul>
-        </main>
+    <div class="submenu-container">
+        <div id="submenu-math" class="submenu">
+            <ul>
+                <li><a href="statistics.html">統計学</a></li>
+            </ul>
+        </div>
+        <div id="submenu-physics" class="submenu">
+            <ul>
+                <li><a href="quantum.html">量子力学</a></li>
+            </ul>
+        </div>
+        <div id="submenu-info" class="submenu">
+            <ul>
+                <li><a href="machine_learning.html">機械学習</a></li>
+            </ul>
+        </div>
     </div>
-</body>
-</html>
+
+    <main class="main-content">
+        <h1>数学</h1>
+        <p>数学に関する資料をまとめています。</p>
+
+        <ul class="pdf-list">
+            <li>
+                <a href="pdfs/sample1.pdf" target="_blank">微分積分学の基礎.pdf</a>
+            </li>
+            <li>
+                <a href="pdfs/sample2.pdf" target="_blank">線形代数学ノート.pdf</a>
+            </li>
+            </ul>
+    </main>
+
+    <script src="script.js"></script
