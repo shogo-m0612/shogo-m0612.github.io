@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>統計学 - My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="#" class="menu-toggle active" data-target="submenu-math">数学</a></li>
+                <li><a href="#" class="menu-toggle" data-target="submenu-physics">物理</a></li>
+                <li><a href="#" class="menu-toggle" data-target="submenu-info">情報</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="submenu-container">
+        <div id="submenu-math" class="submenu active">
+            <ul>
+                <li><a href="statistics.html">統計学</a></li>
+            </ul>
+        </div>
+        <div id="submenu-physics" class="submenu">...</div>
+        <div id="submenu-info" class="submenu">...</div>
+    </div>
+
+    <main class="main-content" style="margin-left: 440px;">
+        <h1>統計学</h1>
+        <p>統計学に関するPDFを配置します。</p>
+        <ul class="pdf-list">
+            <li><a href="pdfs/statistics_intro.pdf" target="_blank">統計学入門.pdf</a></li>
+        </ul>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
