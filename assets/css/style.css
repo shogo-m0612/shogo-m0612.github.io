@@ -1,139 +1,113 @@
-/* --- 全体の設定 --- */
+/* --- 全体の設定 (変更なし) --- */
 body, html {
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
     font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
-    height: 100%;
+    color: #333; background-color: #f4f4f4; height: 100%;
 }
 
-/* --- レイアウト --- */
-.container {
-    display: flex;
-}
-
-/* --- サイドバー --- */
+/* ★★★ --- サイドバー (ここから大幅に更新) --- ★★★ */
 .sidebar {
-    width: 220px;
+    width: 240px; /* 少し幅を広げる */
     background-color: #1a1a1a;
-    padding: 20px 0;
+    padding: 10px 0;
     color: white;
     position: fixed;
     height: 100%;
-    z-index: 1000; /* サイドバーを最前面に */
+    z-index: 1000;
 }
 
 .sidebar nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
-.sidebar nav li a {
-    display: block;
+.sidebar nav li {
     color: white;
-    text-decoration: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    transition: background-color 0.3s;
 }
 
-.sidebar nav li a:hover {
+/* メインメニューの項目 (「数学 >」など) */
+.sidebar nav .menu-item {
+    display: flex; /* 文字と'>'を横並びに */
+    align-items: center; /* 上下中央揃え */
+    text-decoration: none;
+    color: white;
+}
+.sidebar nav .menu-item:hover {
     background-color: #333;
 }
 
-/* ★★★ 親メニューが選択されている(サブメニューが開いている)時のスタイル ★★★ */
-.sidebar nav li a.active {
-    background-color: #0056b3;
-    font-weight: bold;
-}
-
-/* ★★★ --- サブメニューのスタイル (ここから追加) --- ★★★ */
-.submenu-container {
-    position: fixed;
-    left: 220px; /* メインサイドバーの右隣に配置 */
-    top: 0;
-    height: 100%;
-    z-index: 999; /* サイドバーの少し後ろ */
-}
-
-.submenu {
-    display: none; /* 初期状態では非表示 */
-    width: 220px;
-    height: 100%;
-    background-color: #f0f0f0; /* サブメニューの背景色 */
-    border-right: 1px solid #ddd;
-    box-sizing: border-box; /* paddingを含めた幅計算に */
-}
-
-.submenu.active {
-    display: block; /* activeクラスが付いたら表示 */
-}
-
-.submenu ul {
-    list-style: none;
-    padding: 20px 0;
-    margin: 0;
-}
-
-.submenu li a {
-    display: block;
+/* 文字部分のリンク */
+.sidebar nav .menu-item-link {
+    flex-grow: 1; /* できるだけ幅を取る */
+    padding: 15px 25px;
     text-decoration: none;
-    color: #333;
-    padding: 12px 25px;
-    font-size: 16px;
-    transition: background-color 0.3s, color 0.3s;
+    color: white;
+    font-size: 18px;
 }
 
-.submenu li a:hover {
-    background-color: #ddd;
-    color: #000;
+/* '>' ボタン */
+.sidebar nav .submenu-toggle {
+    flex-shrink: 0; /* 縮まないように */
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
 }
-/* ★★★ --- サブメニューのスタイル (ここまで) --- ★★★ */
+
+/* サブメニュー */
+.sidebar .submenu {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    background-color: #2a2a2a; /* サブメニューの背景色 */
+
+    /* ★開閉アニメーションのための設定 */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+/* サブメニューの各項目 */
+.sidebar .submenu li a {
+    display: block;
+    padding: 12px 25px 12px 45px; /* 左側をインデント */
+    font-size: 16px;
+    color: #ccc;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.sidebar .submenu li a:hover {
+    background-color: #444;
+    color: white;
+}
+
+/* ★★★ JSで 'open' クラスが付いた時のスタイル ★★★ */
+/* サブメニューを表示 */
+.sidebar li.has-submenu.open > .submenu {
+    max-height: 500px; /* サブメニューが収まる十分な高さを指定 */
+}
+/* '>' を回転させる */
+.sidebar li.has-submenu.open > .menu-item .submenu-toggle {
+    transform: rotate(90deg);
+}
 
 
 /* --- メインコンテンツ --- */
 .main-content {
-    /* ★★★ JavaScriptで制御するため、初期のマージンを設定 ★★★ */
-    margin-left: 220px;
+    margin-left: 240px; /* サイドバーの幅に合わせる */
     padding: 40px;
     flex-grow: 1;
     background-color: #ffffff;
-    transition: margin-left 0.3s ease; /* マージンが変化する際にアニメーション */
+    /* transitionは不要になったので削除 */
 }
 
-/* 以下、h1, h2, .pdf-listなどのスタイルは変更なし */
-h1 {
-    font-size: 2.5em;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-}
-h2 {
-    font-size: 1.8em;
-    color: #0056b3;
-    border-left: 5px solid #0056b3;
-    padding-left: 10px;
-}
-.profile-list, .pdf-list {
-    list-style: none;
-    padding-left: 0;
-}
-.profile-list li, .pdf-list li {
-    margin-bottom: 15px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-.pdf-list a {
-    text-decoration: none;
-    color: #0056b3;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-.pdf-list a::before {
-    content: '📄 ';
-    margin-right: 8px;
-}
+/* h1, h2, .pdf-listなどのスタイルは変更なし */
+h1 { font-size: 2.5em; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-bottom: 30px; }
+h2 { font-size: 1.8em; color: #0056b3; border-left: 5px solid #0056b3; padding-left: 10px; }
+.pdf-list { list-style: none; padding-left: 0; }
+.pdf-list li { margin-bottom: 15px; padding: 15px; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; }
+.pdf-list a { text-decoration: none; color: #0056b3; font-size: 1.2em; font-weight: bold; }
+.pdf-list a::before { content: '📄 '; margin-right: 8px; }
