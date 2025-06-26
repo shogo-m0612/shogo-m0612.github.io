@@ -10,43 +10,45 @@
     <aside class="sidebar">
         <nav>
             <ul>
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="#" class="menu-toggle" data-target="submenu-math">数学</a></li>
-                <li><a href="#" class="menu-toggle" data-target="submenu-physics">物理</a></li>
-                <li><a href="#" class="menu-toggle" data-target="submenu-info">情報</a></li>
+                <li><a class="menu-item menu-item-link" href="../index.html">ホーム</a></li>
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a class="menu-item-link" href="math.html">数学</a>
+                        <span class="submenu-toggle">&gt;</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="statistics.html">統計学</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a class="menu-item-link" href="physics.html">物理</a>
+                        <span class="submenu-toggle">&gt;</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="quantum.html">量子力学</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a class="menu-item-link" href="info.html">情報</a>
+                        <span class="submenu-toggle">&gt;</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="machine_learning.html">機械学習</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </aside>
 
-    <div class="submenu-container">
-        <div id="submenu-math" class="submenu">
-            <ul>
-                <li><a href="statistics.html">統計学</a></li>
-            </ul>
-        </div>
-        <div id="submenu-physics" class="submenu">
-            <ul>
-                <li><a href="quantum.html">量子力学</a></li>
-            </ul>
-        </div>
-        <div id="submenu-info" class="submenu">
-            <ul>
-                <li><a href="machine_learning.html">機械学習</a></li>
-            </ul>
-        </div>
-    </div>
-
     <main class="main-content">
         <h1>数学</h1>
-        <p>数学に関する資料をまとめています。</p>
-
+        <p>数学分野の概要ページです。各分野の詳細な資料は、サイドバーのサブメニューからアクセスできます。</p>
+        
+        <h2>各分野へのリンク</h2>
         <ul class="pdf-list">
-            <li>
-                <a href="../pdfs/sample1.pdf" target="_blank">微分積分学の基礎.pdf</a>
-            </li>
-            <li>
-                <a href="../pdfs/sample2.pdf" target="_blank">線形代数学ノート.pdf</a>
-            </li>
+            <li><a href="statistics.html">統計学</a></li>
             </ul>
     </main>
 
