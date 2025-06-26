@@ -10,37 +10,48 @@
     <aside class="sidebar">
         <nav>
             <ul>
-                <li><a href="index.html">ホーム</a></li>
-                <li><a href="#" class="menu-toggle" data-target="submenu-math">数学</a></li>
-                <li><a href="#" class="menu-toggle" data-target="submenu-physics">物理</a></li>
-                <li><a href="#" class="menu-toggle" data-target="submenu-info">情報</a></li>
+                <li>
+                    <a class="menu-item menu-item-link" href="index.html">ホーム</a>
+                </li>
+                
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a class="menu-item-link" href="pages/math.html">数学</a>
+                        <span class="submenu-toggle">&gt;</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="pages/statistics.html">統計学</a></li>
+                        </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a class="menu-item-link" href="pages/physics.html">物理</a>
+                        <span class="submenu-toggle">&gt;</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="pages/quantum.html">量子力学</a></li>
+                        </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a class="menu-item-link" href="pages/info.html">情報</a>
+                        <span class="submenu-toggle">&gt;</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="pages/machine_learning.html">機械学習</a></li>
+                        </ul>
+                </li>
             </ul>
         </nav>
     </aside>
 
-    <div class="submenu-container">
-        <div id="submenu-math" class="submenu">
-            <ul>
-                <li><a href="pages/statistics.html">統計学</a></li>
-            </ul>
-        </div>
-        <div id="submenu-physics" class="submenu">
-            <ul>
-                <li><a href="pages/quantum.html">量子力学</a></li>
-            </ul>
-        </div>
-        <div id="submenu-info" class="submenu">
-            <ul>
-                <li><a href="pages/machine_learning.html">機械学習</a></li>
-            </ul>
-        </div>
-    </div>
-
     <main class="main-content">
-        <h1>ホーム</h1>
+        <h1>My Portfolio</h1>
         <p>このサイトは、私が学習した内容をまとめたPDFを公開する場所です。</p>
         <h2>経歴</h2>
-        <ul class="profile-list">
+        <ul>
             <li>20XX年 XX大学 XX学部 入学</li>
         </ul>
     </main>
