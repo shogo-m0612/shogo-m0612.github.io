@@ -111,3 +111,90 @@ h2 { font-size: 1.8em; color: #0056b3; border-left: 5px solid #0056b3; padding-l
 .pdf-list li { margin-bottom: 15px; padding: 15px; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; }
 .pdf-list a { text-decoration: none; color: #0056b3; font-size: 1.2em; font-weight: bold; }
 .pdf-list a::before { content: '📄 '; margin-right: 8px; }
+
+/* --- 文献一覧ページ専用スタイル --- */
+
+/* ページ全体の左右の余白を大きくする */
+.main-content.literature-page {
+    max-width: 960px; /* コンテンツの最大幅を指定 */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5%; /* 画面が狭い時用の余白 */
+    padding-right: 5%; /* 画面が狭い時用の余白 */
+}
+
+/* ページ内目次 */
+.literature-toc {
+    text-align: center;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    font-size: 1.1em;
+}
+
+.literature-toc a {
+    text-decoration: none;
+    color: #0056b3;
+    margin: 0 15px;
+    font-weight: bold;
+}
+.literature-toc a:hover {
+    text-decoration: underline;
+}
+
+
+/* 各分野のセクション */
+.literature-section {
+    margin-bottom: 60px;
+}
+.literature-section h2 {
+    font-size: 2em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0056b3;
+}
+
+/* 各文献を紹介するグレーのボックス */
+.literature-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.literature-item h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.6em;
+}
+
+/* 写真と説明を横並びにするためのコンテナ */
+.literature-body {
+    display: flex;
+    flex-wrap: wrap; /* 画面が狭い場合に折り返す */
+    gap: 25px; /* 写真と説明の間の隙間 */
+    align-items: flex-start; /* 上端揃え */
+}
+
+/* 左側の写真エリア */
+.literature-image {
+    flex: 0 0 180px; /* 幅180pxで固定 */
+}
+
+.literature-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 右側の説明エリア */
+.literature-description {
+    flex: 1; /* 残りの幅をすべて使う */
+    min-width: 300px; /* 折り返す際の最小幅 */
+    line-height: 1.8; /* 行間を広げて読みやすく */
+}
