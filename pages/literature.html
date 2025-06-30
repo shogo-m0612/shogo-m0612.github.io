@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文献一覧 - My Portfolio</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a class="menu-item menu-item-link" href="../index.html">ホーム</a></li>
+                <li class="has-submenu">
+                    <div class="menu-item"><a class="menu-item-link" href="math.html">数学</a><span class="submenu-toggle">&gt;</span></div>
+                    <ul class="submenu"><li><a href="statistics.html">統計学</a></li></ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="menu-item"><a class="menu-item-link" href="physics.html">物理</a><span class="submenu-toggle">&gt;</span></div>
+                    <ul class="submenu"><li><a href="quantum.html">量子力学</a></li></ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="menu-item"><a class="menu-item-link" href="info.html">情報</a><span class="submenu-toggle">&gt;</span></div>
+                    <ul class="submenu"><li><a href="machine_learning.html">機械学習</a></li></ul>
+                </li>
+                <li class="has-submenu open">
+                    <div class="menu-item">
+                        <a class="menu-item-link" href="literature.html">文献一覧</a>
+                        <span class="submenu-toggle">&gt;</span>
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="literature.html#math-books">数学</a></li>
+                        <li><a href="literature.html#physics-books">物理</a></li>
+                        <li><a href="literature.html#info-books">情報</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content literature-page">
+        <h1>文献一覧</h1>
+        <p>学習の参考になった書籍や論文をまとめています。</p>
+
+        <nav class="literature-toc">
+            <a href="#math-books">数学</a> |
+            <a href="#physics-books">物理</a> |
+            <a href="#info-books">情報</a>
+        </nav>
+
+        <section id="math-books" class="literature-section">
+            <h2>数学 (Mathematics)</h2>
+
+            <div class="literature-item">
+                <h3>テキストブック『線形代数』</h3>
+                <div class="literature-body">
+                    <div class="literature-image">
+                        <img src="../assets/images/book_cover_placeholder.png" alt="線形代数の表紙">
+                    </div>
+                    <div class="literature-description">
+                        <p>この本は線形代数の入門書として非常に優れています。幾何学的な直感と数式的な厳密さのバランスが絶妙で、初学者がつまずきやすい抽象的な概念を丁寧に解説してくれます。</p>
+                        <p>特に行列式の定義や固有値問題に関する章は、他のどの教科書よりも分かりやすいと感じました。</p>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+        <section id="physics-books" class="literature-section">
+            <h2>物理 (Physics)</h2>
+            <div class="literature-item">
+                <h3>『ファインマン物理学』</h3>
+                <div class="literature-body">
+                    <div class="literature-image">
+                        <img src="../assets/images/book_cover_placeholder.png" alt="ファインマン物理学の表紙">
+                    </div>
+                    <div class="literature-description">
+                        <p>物理学の考え方そのものを教えてくれる名著。数式を追うだけでなく、物理現象の本質を深く理解したいと考えるすべての人におすすめです。物理的な洞察力を養う上で、この本から受けた影響は計り知れません。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="info-books" class="literature-section">
+            <h2>情報 (Information Science)</h2>
+            </section>
+
+    </main>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
